@@ -1,1 +1,0 @@
-jar -cvfm TC.jar TC.txt TurborixConfig.class TurborixEngine.class BorderPanel.class Calibrate.class ChannelData.class GraphCanvas.class HeliConfig.class LEDCanvas.class SettingData.class TurborixUI.class  librxtxSerial.jnilib gnu
