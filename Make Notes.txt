@@ -1,0 +1,17 @@
+Making TC.jar
+
+I currently compile the source code with:
+
+	java version "1.8.0_144"
+	Java(TM) SE Runtime Environment (build 1.8.0_144-b01)
+	Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
+
+then build the TC.jar file by executing the MakeTCJar.command
+
+The gnu folder contains the classes for the RXTX library that handles serial communication with the transmitter.
+
+Dave Mitchell
+ dave@zenoshrdlu.com
+or 
+zenoshrdlu@gmail.com
+
