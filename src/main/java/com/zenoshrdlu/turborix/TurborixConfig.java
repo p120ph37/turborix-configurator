@@ -28,9 +28,20 @@ public class TurborixConfig extends Frame implements TurborixUI,
                                                      WindowListener,
                                                      ItemListener,
                                                      ActionListener {
+							
+   static final Properties VERSIONING = new Properties();
+   static {
+      try (
+         InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("versioning.properties");
+      ) {
+         VERSIONING.load(is);
+      } catch(IOException e) {
+	 throw new RuntimeException("Unable to load versioning information");
+      }
+   }
 
-   static final String TITLE    = "Turborix Configurator - Dave Mitchell";
-   static final String VERSION  = "2.0.0";
+   static final String TITLE    = VERSIONING.getProperty("title") + " - " + VERSIONING.getProperty("vendor");
+   static final String VERSION  = VERSIONING.getProperty("version");
    static final String CRLF     = "\r\n";
    static final String GET      = "Get Settings";
    static final String SEND     = "Send Settings";
